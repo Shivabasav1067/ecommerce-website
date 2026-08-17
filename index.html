@@ -3,100 +3,1078 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShopEasy | E-Commerce Store</title>
+
+    <title>VELORA — Modern Essentials</title>
+
+    <meta
+        name="description"
+        content="VELORA — Discover premium products designed for modern living."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <div class="logo">ShopEasy</div>
-
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="#about">About</a>
-        </div>
-
-        <button class="cart-btn">
-            🛒 Cart (<span id="cart-count">0</span>)
-        </button>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Shop Smarter. Live Better.</h1>
-            <p>Discover amazing products at great prices.</p>
-            <a href="#products" class="shop-btn">Shop Now</a>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <h2>Featured Products</h2>
-
-        <div class="products">
-
-            <div class="product-card">
-                <div class="product-image">🎧</div>
-                <h3>Wireless Headphones</h3>
-                <p class="price">₹2,999</p>
-                <button class="add-cart" data-name="Wireless Headphones">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">⌚</div>
-                <h3>Smart Watch</h3>
-                <p class="price">₹4,999</p>
-                <button class="add-cart" data-name="Smart Watch">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">👟</div>
-                <h3>Running Shoes</h3>
-                <p class="price">₹3,499</p>
-                <button class="add-cart" data-name="Running Shoes">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">📱</div>
-                <h3>Smartphone</h3>
-                <p class="price">₹19,999</p>
-                <button class="add-cart" data-name="Smartphone">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">🎒</div>
-                <h3>Travel Backpack</h3>
-                <p class="price">₹1,999</p>
-                <button class="add-cart" data-name="Travel Backpack">Add to Cart</button>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">⌨️</div>
-                <h3>Mechanical Keyboard</h3>
-                <p class="price">₹5,499</p>
-                <button class="add-cart" data-name="Mechanical Keyboard">Add to Cart</button>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About ShopEasy</h2>
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+    <div class="announcement">
         <p>
-            ShopEasy is a simple e-commerce platform where users can explore
-            products and add their favorite items to their shopping cart.
+            <i class="fa-solid fa-truck-fast"></i>
+            Free shipping on orders over ₹2,000
         </p>
-    </section>
+    </div>
 
-    <!-- Footer -->
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+    <header class="navbar">
+
+        <a href="#" class="brand">
+            <span class="brand-mark">V</span>
+            <span>VELORA</span>
+        </a>
+
+        <nav class="desktop-nav">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#featured">Featured</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <button class="icon-button" id="searchToggle" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <button class="icon-button cart-icon" id="cartToggle" aria-label="Shopping cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cartCount">0</span>
+            </button>
+
+            <button class="mobile-menu-button" id="mobileMenuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MOBILE MENU
+    ========================== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#featured">Featured</a>
+        <a href="#about">About</a>
+    </div>
+
+
+    <!-- =========================
+         SEARCH PANEL
+    ========================== -->
+    <div class="search-panel" id="searchPanel">
+
+        <div class="search-inner">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                autocomplete="off"
+            >
+
+            <button id="closeSearch">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    <span></span>
+                    NEW SEASON 2026
+                </div>
+
+                <h1>
+                    Designed for
+                    <em>your lifestyle.</em>
+                </h1>
+
+                <p>
+                    Discover thoughtfully designed essentials that
+                    bring style, simplicity and functionality together.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#shop" class="primary-button">
+                        Explore collection
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#featured" class="secondary-button">
+                        View featured
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong>10K+</strong>
+                        <span>Happy customers</span>
+                    </div>
+
+                    <div>
+                        <strong>4.9/5</strong>
+                        <span>Average rating</span>
+                    </div>
+
+                    <div>
+                        <strong>48h</strong>
+                        <span>Fast dispatch</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="hero-glow"></div>
+
+                <div class="hero-image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1200&q=85"
+                        alt="Premium watch"
+                    >
+
+                    <div class="floating-card">
+                        <span class="floating-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </span>
+
+                        <div>
+                            <strong>Editor's pick</strong>
+                            <span>Minimal Watch</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TRUST BAR
+        ========================== -->
+        <section class="trust-section">
+
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <strong>Secure checkout</strong>
+                    <span>Your payment is protected</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="fa-solid fa-box"></i>
+                <div>
+                    <strong>Carefully packed</strong>
+                    <span>Every order handled with care</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="fa-solid fa-rotate-left"></i>
+                <div>
+                    <strong>Easy returns</strong>
+                    <span>30-day return policy</span>
+                </div>
+            </div>
+
+            <div class="trust-item">
+                <i class="fa-solid fa-headset"></i>
+                <div>
+                    <strong>Human support</strong>
+                    <span>We're here when you need us</span>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SHOP
+        ========================== -->
+        <section class="shop-section section" id="shop">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="eyebrow">THE COLLECTION</span>
+
+                    <h2>
+                        Find your next
+                        <span>favorite.</span>
+                    </h2>
+                </div>
+
+                <p>
+                    Curated pieces for work, travel,
+                    everyday life and everything in between.
+                </p>
+
+            </div>
+
+
+            <!-- FILTERS -->
+            <div class="shop-toolbar">
+
+                <div class="categories">
+
+                    <button class="category active" data-category="all">
+                        All
+                    </button>
+
+                    <button class="category" data-category="tech">
+                        Tech
+                    </button>
+
+                    <button class="category" data-category="fashion">
+                        Fashion
+                    </button>
+
+                    <button class="category" data-category="home">
+                        Home
+                    </button>
+
+                    <button class="category" data-category="travel">
+                        Travel
+                    </button>
+
+                </div>
+
+                <div class="result-count">
+                    <span id="resultCount">8</span> products
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTS -->
+            <div class="product-grid" id="productGrid">
+
+                <!-- PRODUCT 1 -->
+                <article
+                    class="product-card"
+                    data-category="tech"
+                    data-name="Aero Wireless Headphones"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Bestseller
+                        </span>
+
+                        <button
+                            class="wishlist"
+                            aria-label="Add to wishlist"
+                        >
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+                            alt="Wireless headphones"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            AUDIO
+                        </span>
+
+                        <h3>Aero Wireless Headphones</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.9 (128)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹5,999
+                                <del>₹7,499</del>
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="1"
+                                data-name="Aero Wireless Headphones"
+                                data-price="5999"
+                                data-image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 2 -->
+                <article
+                    class="product-card"
+                    data-category="fashion"
+                    data-name="Mono Classic Watch"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge new">
+                            New
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+                            alt="Classic watch"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            ACCESSORIES
+                        </span>
+
+                        <h3>Mono Classic Watch</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.8 (94)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹4,499
+                                <del>₹5,999</del>
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="2"
+                                data-name="Mono Classic Watch"
+                                data-price="4499"
+                                data-image="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+                <article
+                    class="product-card"
+                    data-category="fashion"
+                    data-name="Urban Essential Sneakers"
+                >
+
+                    <div class="product-image">
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                            alt="White sneakers"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            FOOTWEAR
+                        </span>
+
+                        <h3>Urban Essential Sneakers</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.7 (211)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹3,999
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="3"
+                                data-name="Urban Essential Sneakers"
+                                data-price="3999"
+                                data-image="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+                <article
+                    class="product-card"
+                    data-category="home"
+                    data-name="Nordic Ceramic Set"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Popular
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=85"
+                            alt="Ceramic cups"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            HOME
+                        </span>
+
+                        <h3>Nordic Ceramic Set</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.9 (76)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹1,899
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="4"
+                                data-name="Nordic Ceramic Set"
+                                data-price="1899"
+                                data-image="https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 5 -->
+                <article
+                    class="product-card"
+                    data-category="tech"
+                    data-name="Studio Mechanical Keyboard"
+                >
+
+                    <div class="product-image">
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=85"
+                            alt="Mechanical keyboard"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            DESK TECH
+                        </span>
+
+                        <h3>Studio Mechanical Keyboard</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.8 (63)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹6,499
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="5"
+                                data-name="Studio Mechanical Keyboard"
+                                data-price="6499"
+                                data-image="https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 6 -->
+                <article
+                    class="product-card"
+                    data-category="travel"
+                    data-name="Nomad Everyday Backpack"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge new">
+                            New
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+                            alt="Travel backpack"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            TRAVEL
+                        </span>
+
+                        <h3>Nomad Everyday Backpack</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.9 (142)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹2,999
+                                <del>₹3,799</del>
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="6"
+                                data-name="Nomad Everyday Backpack"
+                                data-price="2999"
+                                data-image="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 7 -->
+                <article
+                    class="product-card"
+                    data-category="home"
+                    data-name="Cloud Soft Lamp"
+                >
+
+                    <div class="product-image">
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85"
+                            alt="Modern lamp"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            LIGHTING
+                        </span>
+
+                        <h3>Cloud Soft Lamp</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.8 (51)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹2,499
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="7"
+                                data-name="Cloud Soft Lamp"
+                                data-price="2499"
+                                data-image="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 8 -->
+                <article
+                    class="product-card"
+                    data-category="tech"
+                    data-name="Air Pro Smart Speaker"
+                >
+
+                    <div class="product-image">
+
+                        <span class="product-badge">
+                            Top rated
+                        </span>
+
+                        <button class="wishlist">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+
+                        <img
+                            src="https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=900&q=85"
+                            alt="Smart speaker"
+                        >
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="product-category">
+                            SMART HOME
+                        </span>
+
+                        <h3>Air Pro Smart Speaker</h3>
+
+                        <div class="rating">
+                            <span>★★★★★</span>
+                            <small>4.9 (187)</small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <div class="price">
+                                ₹3,499
+                            </div>
+
+                            <button
+                                class="add-button"
+                                data-id="8"
+                                data-name="Air Pro Smart Speaker"
+                                data-price="3499"
+                                data-image="https://images.unsplash.com/photo-1589003077984-894e133dabab?auto=format&fit=crop&w=900&q=85"
+                            >
+                                <i class="fa-solid fa-plus"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <div class="empty-state" id="emptyState">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <h3>No products found</h3>
+                <p>Try a different search or category.</p>
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURED BANNER
+        ========================== -->
+        <section class="feature-section section" id="featured">
+
+            <div class="feature-content">
+
+                <span class="eyebrow">
+                    THE VELORA EDIT
+                </span>
+
+                <h2>
+                    Less clutter.
+                    <br>
+                    <em>More meaning.</em>
+                </h2>
+
+                <p>
+                    We believe the best products are the ones
+                    you reach for every single day.
+                </p>
+
+                <a href="#shop" class="primary-button light">
+                    Shop the edit
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+            <div class="feature-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1400&q=85"
+                    alt="Minimal modern workspace"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+        <section class="about-section section" id="about">
+
+            <div class="about-grid">
+
+                <div class="about-heading">
+                    <span class="eyebrow">OUR PHILOSOPHY</span>
+
+                    <h2>
+                        Good design should
+                        <span>feel effortless.</span>
+                    </h2>
+                </div>
+
+                <div class="about-copy">
+
+                    <p>
+                        VELORA is built around one simple idea:
+                        everyday products deserve extraordinary design.
+                    </p>
+
+                    <p>
+                        We search for things that balance
+                        usefulness, quality and timeless style—
+                        without unnecessary complexity.
+                    </p>
+
+                    <a href="#shop" class="text-link">
+                        Discover VELORA
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             NEWSLETTER
+        ========================== -->
+        <section class="newsletter">
+
+            <div>
+
+                <span class="eyebrow">
+                    STAY IN THE LOOP
+                </span>
+
+                <h2>
+                    Get the good stuff.
+                </h2>
+
+                <p>
+                    New arrivals, thoughtful recommendations
+                    and occasional offers. No spam.
+                </p>
+
+            </div>
+
+            <form id="newsletterForm">
+
+                <input
+                    type="email"
+                    id="emailInput"
+                    placeholder="Your email address"
+                    required
+                >
+
+                <button type="submit">
+                    Subscribe
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
     <footer>
-        <p>© 2026 ShopEasy. All Rights Reserved.</p>
+
+        <div class="footer-main">
+
+            <div class="footer-brand">
+
+                <a href="#" class="brand">
+                    <span class="brand-mark">V</span>
+                    <span>VELORA</span>
+                </a>
+
+                <p>
+                    Everyday essentials,
+                    thoughtfully selected.
+                </p>
+
+                <div class="socials">
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>Shop</h4>
+
+                <a href="#shop">All products</a>
+                <a href="#shop">Tech</a>
+                <a href="#shop">Fashion</a>
+                <a href="#shop">Home</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>Company</h4>
+
+                <a href="#about">About us</a>
+                <a href="#">Journal</a>
+                <a href="#">Careers</a>
+                <a href="#">Contact</a>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h4>Help</h4>
+
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">FAQ</a>
+                <a href="#">Privacy</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 VELORA. All rights reserved.
+            </span>
+
+            <span>
+                Crafted with intention.
+            </span>
+
+        </div>
+
     </footer>
 
+
+    <!-- =========================
+         CART DRAWER
+    ========================== -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <aside class="cart-drawer" id="cartDrawer">
+
+        <div class="cart-header">
+
+            <div>
+                <span class="eyebrow">YOUR BAG</span>
+                <h2>Your cart</h2>
+            </div>
+
+            <button id="closeCart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+        </div>
+
+        <div class="cart-items" id="cartItems">
+
+            <div class="cart-empty">
+                <div class="empty-bag">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+
+                <h3>Your bag is empty</h3>
+
+                <p>
+                    Add something you love and it will appear here.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <strong id="cartTotal">₹0</strong>
+            </div>
+
+            <p class="cart-note">
+                Taxes and shipping calculated at checkout.
+            </p>
+
+            <button class="checkout-button" id="checkoutButton">
+                Proceed to checkout
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div>
+            <strong id="toastTitle">
+                Added to cart
+            </strong>
+
+            <span id="toastMessage">
+                Product added successfully.
+            </span>
+        </div>
+
+    </div>
+
+
     <script src="script.js"></script>
+
 </body>
 </html>
